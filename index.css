@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -10,11 +14,10 @@ body {
 }
 
 .score-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
-    width: 100%;
+    min-width: 500px;
 }
 
 .score__label {
@@ -22,14 +25,15 @@ body {
     text-transform: uppercase;
     font-family: 'Verdana', sans-serif;
     font-size: 30px;
+    text-align: center;
 }
 
 .score__value {
     background: #080001;
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 5px;
     margin-block-end: 20px;
-    font-size: 80px;
+    font-size: 90px;
     font-family: "Orbitron", sans-serif;
     font-weight: 700;
     color: #F94F6D;
@@ -37,6 +41,7 @@ body {
 
 .score__buttons {
     display: flex;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -48,6 +53,7 @@ body {
     padding: 10px;
     cursor: pointer;
     font-family: "Orbitron", sans-serif;
+    font-size: 16px;
 }
 
 .button--new-game {
